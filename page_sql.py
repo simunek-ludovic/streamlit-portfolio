@@ -103,7 +103,7 @@ with st.expander("Afficher tout le contenu (toutes les colonnes et lignes) de la
     st.code(select_prenom, language="sql")
 
 # Ajouter un expander pour un autre exemple
-with st.expander("Trier par ordre croissant la colonne 'nom' de la table 'auteur' et afficher uniquement la colonne 'nom'"):
+with st.expander("Trier par ordre croissant la colonne 'nom' de la table 'auteur' et afficher uniquement    la colonne 'nom'"):
     tri_nom = """
     SELECT nom
     FROM auteur
@@ -111,8 +111,3 @@ with st.expander("Trier par ordre croissant la colonne 'nom' de la table 'auteur
     ;
     """
     st.code(tri_nom, language="sql")
-
-
-
-
-

@@ -28,15 +28,25 @@ st.markdown("""
     <hr>
     """, unsafe_allow_html=True)
 
-# Code
-with st.expander("Créer une base de données 'demo'"):
-    st.code("""
-    CREATE DATABASE demo;
-    """, use_container_width=True)
 
-
-
-
-
-
-
+st.write("### PowerBI")
+st.write("Voici un exemple de code SQL utilisé pour la partie Logistique :")
+# Ajouter un expander pour un autre exemple
+with st.expander("Afficher/Cacher le code SQL"):
+    sql_logistique = """
+    SELECT 
+        customers.country AS `Pays_client`,
+        productLine AS `Catégorie_produit`,
+        products.productName AS `Nom_produit`,
+        productScale AS `Echelle`,
+        DATE_FORMAT(orders.orderDate, "%d/%m/%Y") AS `Date_commande`,
+        DATE_FORMAT( orders.shippedDate, "%d/%m/%Y") AS `Date_envoi`,
+        DATEDIFF(orders.shippedDate, orders.orderDate) AS `Délai_envoi`
+    FROM products
+    JOIN orderdetails ON products.productCode = orderdetails.productCode
+    JOIN orders ON orderdetails.orderNumber = orders.orderNumber
+    JOIN customers ON customers.customerNumber = orders.customerNumber
+    WHERE orders.status = "Shipped"
+    ;
+    """
+    st.code(sql_logistique, language="sql")

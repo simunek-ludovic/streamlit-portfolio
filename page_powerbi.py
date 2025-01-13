@@ -34,9 +34,18 @@ st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg")
 
 
 st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience.")
-st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_010.jpg")
-
-
+# Afficher l'image avec une bordure noire fine
+st.markdown("""
+    <style>
+        .image-container img {
+            border: 1px solid black;  /* Bordure noire très fine */
+            padding: 2px;  /* Un petit espace autour de l'image */
+        }
+    </style>
+    <div class="image-container">
+        <img src="https://i72.servimg.com/u/f72/20/11/38/84/2025_010.jpg">
+    </div>
+""", unsafe_allow_html=True)
 
 
 

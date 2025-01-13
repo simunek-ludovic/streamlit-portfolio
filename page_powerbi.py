@@ -25,7 +25,10 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg)
+st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg")
+
+
+
 st.write("Cette business Case est sur les métiers de la Data (Temps imparti : 1/2 journée)")
 # Liste des images pour la navigation avec flèches
 images = [

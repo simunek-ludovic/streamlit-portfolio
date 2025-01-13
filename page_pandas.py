@@ -11,21 +11,21 @@ sous_menu = st.sidebar.radio("Naviguez dans la découverte de Pandas :", ["Prés
 # Contenu en fonction du choix dans le sous-menu
 if sous_menu == "Présentation":
     st.write("***Pandas*** est une bibliothèque Python très populaire pour la manipulation et l'analyse de données. Elle permet de traiter efficacement des données sous forme de tableaux (similaires aux feuilles de calcul Excel ou aux bases de données SQL")
-    st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv) qui contient environ 2500 lignes et 11 colonnes.")
+    st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv) qui contient environ 2500 lignes et 11 colonnes.")
     import pandas as pd
     
     with st.expander("Convertir ce fichier CSV en DataFrame 'df_csv'"):
         st.code("""
         import pandas as pd
-        url="https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv"
+        url="https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv"
         df_csv = pd.read_csv(url)            
         df_csv
         """, language='python')
-        url="https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv"
+        url="https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv"
         df_csv = pd.read_csv(url)            
 
     # Charger le fichier CSV
-    df = pd.read_csv("https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
 
     # Afficher le DataFrame dans Streamlit
     st.dataframe(df, use_container_width=True)
@@ -33,7 +33,7 @@ if sous_menu == "Présentation":
 
 elif sous_menu == "Pré-traitement des données":
     # Charger le fichier CSV
-    df_csv = pd.read_csv("https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
+    df_csv = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
 
     # Code
     st.write("Nous allons parcourir quelques exemples d'utilisation du **Pré-traitement des données** :")
@@ -105,7 +105,7 @@ elif sous_menu == "Pré-traitement des données":
 
 elif sous_menu == "Nettoyage des données":
     # Charger le fichier CSV
-    df_csv = pd.read_csv("https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
+    df_csv = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
 
     # Code
     st.write("Nous allons parcourir quelques exemples du **Nettoyage des données** :")
@@ -288,7 +288,7 @@ elif sous_menu == "Nettoyage des données":
 
 elif sous_menu == "Analyse des données":
     # Charger le fichier CSV
-    df_csv = pd.read_csv("https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
+    df_csv = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
     
     df = df_csv.copy()
     

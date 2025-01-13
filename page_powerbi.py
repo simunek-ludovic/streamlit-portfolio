@@ -62,7 +62,7 @@ st.markdown("""
 
 st.write("")
 st.write("")
-st.write("Cette slide présente la description des salaires :")
+st.write("Cette slide présente la répartition des salariés dans le monde avec notamment les 5 pays avec le plus de profesionnels :")
 # Afficher l'image avec une bordure noire fine1
 st.markdown("""
     <style>

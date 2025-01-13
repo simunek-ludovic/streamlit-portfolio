@@ -8,7 +8,7 @@ st.set_page_config(
 
 
 # Titre principal du site avec la taille de police ajustée
-st.title("Mon Portfolio de Data Analyst")
+st.title("Ludovic Simunek : Mon Portfolio de Data Analyst")
 
 # Barre de navigation
 page_selection = st.sidebar.radio("Choisissez une page :", ["Accueil", "Python", "PowerBI", "SQL", "Streamlit", "Projets"], index=0)

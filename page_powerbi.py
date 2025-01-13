@@ -24,55 +24,22 @@ st.markdown("""
     <hr>
     """, unsafe_allow_html=True)
 
+st.write("Cette business Case est sur les métiers de la Data dans le monde (Temps imparti : 1/2 journée)")
+
+st.write("Cette slide présente l'évolution des métiers de la data depuis 2020.")
+st.write("En 2020 il y avait 22 métiers différents pour 75 salariés. En 2024 nous sommes à 251 métiers différents pour 62228 salariés")
+st.write("Les 5 métiers les plus dominants en 2024 sont : Data Scientist, Software Engineer, Data Engineer, Data Analust et Machine Learning Enginner")
 
 st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg")
 
 
+st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience.")
+st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_010.jpg")
 
-st.write("Cette business Case est sur les métiers de la Data (Temps imparti : 1/2 journée)")
-# Liste des images pour la navigation avec flèches
-images = [
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_010.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_014.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_017.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_016.jpg"
-    ]
 
-# Fonction pour changer l'image
-def next_image():
-    if st.session_state.image_index < len(images) - 1:
-        st.session_state.image_index += 1
 
-def prev_image():
-    if st.session_state.image_index > 0:
-        st.session_state.image_index -= 1
 
-# Ajouter les boutons pour naviguer
-col1, col2, col3 = st.columns([1, 4, 1])  # Répartition de l'espace avec une colonne vide pour "Suivante"
 
-# Le bouton "Précédente" reste à gauche
-with col1:
-    if st.button("⬅ Précédente"):
-        prev_image()
-
-# Le bouton "Suivante" est à droite
-with col3:
-    if st.button("Suivante ➡"):
-        next_image()
-
-# Index de l'image actuellement affichée
-if 'image_index' not in st.session_state:
-    st.session_state.image_index = 0
-
-# Affichage de l'image actuelle (réduite et cliquable pour voir en grand)
-image_url = images[st.session_state.image_index]
-st.markdown(
-    f"""
-    <div style="display: flex; justify-content: center;">
-    <a href="{image_url}" target="_blank">
-        <img src="{image_url}">
-    </a>
-    """,
-    unsafe_allow_html=True
-)
+st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_014.jpg")
+st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_017.jpg")
+st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_016.jpg")

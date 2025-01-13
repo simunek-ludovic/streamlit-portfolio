@@ -26,6 +26,7 @@ st.markdown("""
 
 st.write("Cette business Case est sur les métiers de la Data dans le monde (Temps imparti : 1/2 journée)")
 
+st.write("")
 st.write("Cette slide présente l'évolution des métiers de la data depuis 2020 :")
 
 # Afficher l'image avec une bordure noire fine
@@ -41,6 +42,7 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+st.write("")
 st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience professionnelle :")
 # Afficher l'image avec une bordure noire fine
 st.markdown("""
@@ -55,6 +57,7 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+st.write("")
 st.write("Cette slide présente la description des salaires :")
 # Afficher l'image avec une bordure noire fine1
 st.markdown("""
@@ -69,6 +72,7 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+st.write("")
 st.write("Cette slide présente la répartition des 10 métiers les plus dominants (nombre de salariés et salaire moyen) par métier et par expérience :")
 # Afficher l'image avec une bordure noire fine
 st.markdown("""

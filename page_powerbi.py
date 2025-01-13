@@ -78,7 +78,7 @@ st.markdown("""
 
 st.write("")
 st.write("")
-st.write("Cette slide présente la répartition des 10 métiers les plus dominants (nombre de salariés et salaire moyen) par métier et par expérience :")
+st.write("Cette slide présente la répartition des 10 métiers les plus dominants (nombre de salariés et salaire moyen) par métier et par expérience (durant l'année 2020):")
 # Afficher l'image avec une bordure noire fine
 st.markdown("""
     <style>
@@ -94,7 +94,7 @@ st.markdown("""
 
 st.write("")
 st.write("")
-st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience professionnelle :")
+st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience professionnelle (durant l'année 2024):")
 # Afficher l'image avec une bordure noire fine
 st.markdown("""
     <style>

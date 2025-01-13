@@ -24,18 +24,15 @@ st.markdown("""
     <hr>
     """, unsafe_allow_html=True)
 
-st.write("Cette business Case est sur les métiers de la Data")
+st.write("Cette business Case est sur les métiers de la Data (Temps imparti : 1/2 journée)")
 # Liste des images pour la navigation avec flèches
 images = [
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_010.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_011.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_012.jpg",
     "https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg",
+    "https://i72.servimg.com/u/f72/20/11/38/84/2025_010.jpg",
     "https://i72.servimg.com/u/f72/20/11/38/84/2025_014.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_015.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_016.jpg",
-    "https://i72.servimg.com/u/f72/20/11/38/84/2025_017.jpg"
-]
+    "https://i72.servimg.com/u/f72/20/11/38/84/2025_017.jpg",
+    "https://i72.servimg.com/u/f72/20/11/38/84/2025_016.jpg"
+    ]
 
 # Fonction pour changer l'image
 def next_image():

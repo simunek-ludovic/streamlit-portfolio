@@ -32,7 +32,7 @@ st.markdown("""
 with st.expander("Créer une base de données 'demo'"):
     st.code("""
     CREATE DATABASE demo;
-    """, language='sql', use_container_width=True)
+    """, use_container_width=True)
 
 
 

@@ -12,20 +12,20 @@ st.write("""Le Regex (ou REGular EXpression) est une séquence de caractères qu
 - Valider des entrées comme des emails, des numéros de téléphone, des formats de date, etc...
 """)
 
-st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/ludovic-simunek/portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
+st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
 
 with st.expander("Convertir ce fichier CSV en DataFrame 'df_csv'"):
     st.code("""
     import pandas as pd
-    url="https://raw.githubusercontent.com/ludovic-simunek/portfolio/refs/heads/main/csv/candidates_df.csv"
+    url="https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv"
     df_csv = pd.read_csv(url)            
     df_csv
     """, language='python')
-    url="https://raw.githubusercontent.com/ludovic-simunek/portfolio/refs/heads/main/csv/candidates_df.csv"
+    url="https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv"
     df_csv = pd.read_csv(url)            
 
 # Charger le fichier CSV
-df = pd.read_csv("https://raw.githubusercontent.com/ludovic-simunek/portfolio/refs/heads/main/csv/candidates_df.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/ludovic-simunek/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv")
 
 # Afficher le DataFrame dans Streamlit
 st.dataframe(df, use_container_width=True)

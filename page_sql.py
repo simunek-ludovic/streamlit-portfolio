@@ -35,5 +35,50 @@ with st.expander("Créer une base de données 'demo'"):
     """
     st.code(create_database, language="sql")
 
+# Ajouter un expander pour un autre exemple
+with st.expander("Utiliser la base de données 'demo'"):
+    use = """
+    USE demo;
+    """
+    st.code(use, language="sql")
 
+# Ajouter un expander pour un autre exemple
+with st.expander("Création une table 'auteur'"):
+    create_table_auteur = """
+    CREATE TABLE auteur (
+    id_auteur 	INT 		PRIMARY KEY		AUTO_INCREMENT,
+    nom 		VARCHAR(50),
+    prenom 		VARCHAR(50)
+    );
+    """
+    st.code(create_table_auteur, language="sql")
 
+# Ajouter un expander pour un autre exemple
+with st.expander("Ajouter des données dans la table 'auteur' pour mise à jour par exemple"):
+    insert_into_auteur = """
+    INSERT INTO auteur (prenom, nom)
+    VALUES
+    ('Alain','Amalric'),
+    ('Brigitte','Delon'),
+    ('Catherine','Belmondo'),
+    ('Gerard','Cassel'),
+    ('Isabelle','Cotillard'),
+    ('Jean','Bardot'),
+    ('Jean-Paul','Deneuve'),
+    ('Lea','Depardieu'),
+    ('Marion','Gabin'),
+    ('Mathieu','Huppert'),
+    ('Omar','Kiberlain'),
+    ('Sandrine','Seydoux'),
+    ('Vincent','Sy')
+    ;
+    """
+    st.code(insert_into_auteur, language="sql")
+
+# Ajouter un expander pour un autre exemple
+with st.expander("Afficher le contenu de la table 'auteur'"):
+    select_all = """
+    SELECT *
+    FROM auteur;
+    """
+    st.code(select_all, language="sql")

@@ -26,14 +26,22 @@ st.markdown("""
 
 st.write("Cette business Case est sur les métiers de la Data dans le monde (Temps imparti : 1/2 journée)")
 
-st.write("Cette slide présente l'évolution des métiers de la data depuis 2020.")
-st.write("En 2020 il y avait 22 métiers différents pour 75 salariés. En 2024 nous sommes à 251 métiers différents pour 62228 salariés")
-st.write("Les 5 métiers les plus dominants en 2024 sont : Data Scientist, Software Engineer, Data Engineer, Data Analust et Machine Learning Enginner")
+st.write("Cette slide présente l'évolution des métiers de la data depuis 2020 :")
 
-st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg")
+# Afficher l'image avec une bordure noire fine
+st.markdown("""
+    <style>
+        .image-container img {
+            border: 1px solid black;  /* Bordure noire très fine */
+            padding: 2px;  /* Un petit espace autour de l'image */
+        }
+    </style>
+    <div class="image-container">
+        <img src="https://i72.servimg.com/u/f72/20/11/38/84/2025_013.jpg">
+    </div>
+""", unsafe_allow_html=True)
 
-
-st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience.")
+st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience professionnelle :")
 # Afficher l'image avec une bordure noire fine
 st.markdown("""
     <style>
@@ -47,8 +55,53 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
+st.write("Cette slide présente la description des salaires :")
+# Afficher l'image avec une bordure noire fine1
+st.markdown("""
+    <style>
+        .image-container img {
+            border: 1px solid black;  /* Bordure noire très fine */
+            padding: 2px;  /* Un petit espace autour de l'image */
+        }
+    </style>
+    <div class="image-container">
+        <img src="https://i72.servimg.com/u/f72/20/11/38/84/2025_014.jpg">
+    </div>
+""", unsafe_allow_html=True)
+
+st.write("Cette slide présente la répartition des 10 métiers les plus dominants (nombre de salariés et salaire moyen) par métier et par expérience :")
+# Afficher l'image avec une bordure noire fine
+st.markdown("""
+    <style>
+        .image-container img {
+            border: 1px solid black;  /* Bordure noire très fine */
+            padding: 2px;  /* Un petit espace autour de l'image */
+        }
+    </style>
+    <div class="image-container">
+        <img src="https://i72.servimg.com/u/f72/20/11/38/84/2025_017.jpg">
+    </div>
+""", unsafe_allow_html=True)
 
 
-st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_014.jpg")
-st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_017.jpg")
-st.image("https://i72.servimg.com/u/f72/20/11/38/84/2025_016.jpg")
+
+
+
+
+
+
+
+
+st.write("Cette slide présente la répartition des salariés à travers leur type de contrat, la taille de l'entreprise, leur mode de travail et leur expérience professionnelle :")
+# Afficher l'image avec une bordure noire fine
+st.markdown("""
+    <style>
+        .image-container img {
+            border: 1px solid black;  /* Bordure noire très fine */
+            padding: 2px;  /* Un petit espace autour de l'image */
+        }
+    </style>
+    <div class="image-container">
+        <img src="https://i72.servimg.com/u/f72/20/11/38/84/2025_016.jpg">
+    </div>
+""", unsafe_allow_html=True)

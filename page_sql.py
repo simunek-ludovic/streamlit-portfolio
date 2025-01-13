@@ -14,4 +14,29 @@ Les fonctionnalités principales de SQL sont :
 5. **Gestion des relations** entre les tables
 """)
 
-st.write("Le projet Toys & Models vous permettra de naviguer dans l'univers SQL")
+st.write("Même si le projet Toys & Models vous permettra de naviguer dans l'univers SQL, je vous présente quelques fonctionnalités :")
+
+# Créer un trait de séparation
+st.markdown("""
+    <style>
+        hr {
+            border: 1px solid #000000;  /* couleur du trait */
+            margin: 1px 0;             /* espace avant et après le trait */
+            height: 5px;                /* hauteur du trait */
+        }
+    </style>
+    <hr>
+    """, unsafe_allow_html=True)
+
+# Code
+with st.expander("Créer une base de données 'demo'"):
+    st.code("""
+    CREATE DATABASE demo;
+    """, language='sql', use_container_width=True)
+
+
+
+
+
+
+

@@ -76,9 +76,34 @@ with st.expander("Ajouter des données dans la table 'auteur' pour mise à jour 
     st.code(insert_into_auteur, language="sql")
 
 # Ajouter un expander pour un autre exemple
-with st.expander("Afficher le contenu de la table 'auteur'"):
+with st.expander("Afficher tout le contenu (toutes les colonnes et lignes) de la table 'auteur'"):
     select_all = """
     SELECT *
     FROM auteur;
     """
     st.code(select_all, language="sql")
+
+# Ajouter un expander pour un autre exemple
+with st.expander("Afficher tout le contenu (toutes les colonnes et lignes) de la table 'auteur' quand la colonne prenom = 'Alain'"):
+    select_prenom = """
+    SELECT *
+    FROM auteur
+    WHERE prenom = "Alain";
+    """
+    st.code(select_prenom, language="sql")
+
+# Ajouter un expander pour un autre exemple
+with st.expander("Afficher tout le contenu (toutes les colonnes et lignes) de la table 'auteur' quand la colonne prenom contient 'Jean'"):
+    select_prenom = """
+    SELECT *
+    FROM auteur
+    WHERE prenom LIKE "%Jean%"
+    ;
+    """
+    st.code(select_prenom, language="sql")
+
+
+
+
+
+

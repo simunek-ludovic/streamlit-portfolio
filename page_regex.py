@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import streamlit as st
 
 # Fichier d'appui si besoin :
 # https://raw.githubusercontent.com/murpi/wilddata/master/quests/candidates_df.csv
@@ -12,44 +13,11 @@ st.write("""Le Regex (ou REGular EXpression) est une séquence de caractères qu
 - Valider des entrées comme des emails, des numéros de téléphone, des formats de date, etc...
 """)
 
-# Créer un trait de séparation
-st.markdown("""
-    <style>
-        hr {
-            border: 1px solid #000000;  /* couleur du trait */
-            margin: 1px 0;             /* espace avant et après le trait */
-            height: 5px;                /* hauteur du trait */
-        }
-    </style>
-    <hr>
-    """, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import streamlit as st
-import re
-
-# Titre de la page
-st.title("Guide des Expressions Régulières (Regex)")
-
 # Explication générale
-st.write("""
-Les expressions régulières sont un puissant outil pour manipuler les chaînes de caractères. Voici un guide détaillé pour comprendre les principales syntaxes utilisées dans les regex.
-""")
+st.write("""Les expressions régulières sont un puissant outil pour manipuler les chaînes de caractères. Voici un guide détaillé pour comprendre les principales syntaxes utilisées dans les regex.""")
 
 # Section 1 : Caractères de base
-st.write("### 1. Caractères de base")
+st.write("### Caractères de base")
 
 # Définition et exemple pour chaque caractère
 st.write("""

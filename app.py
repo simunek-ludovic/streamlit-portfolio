@@ -12,7 +12,7 @@ st.set_page_config(
 st.title("Mon Portfolio de Data Analyst")
 
 # Barre de navigation
-page_selection = st.sidebar.radio("Choisissez une page :", ["Accueil", "Python", "PowerBI", "SQL", "Streamlit", "Projets"], index=0)
+page_selection = st.sidebar.radio("Choisissez une page :", ["Accueil", "Git / Github", "Python", "PowerBI", "SQL", "Streamlit", "Projets"], index=0)
 
 # Affichage de la page sélectionnée
 if page_selection == "Accueil":
@@ -32,6 +32,12 @@ if page_selection == "Accueil":
     st.write("Mail : ludovic@simunek.fr")
     st.write("Téléphone : 06 51 52 42 33")
     st.write("https://www.linkedin.com/in/ludovic-simunek/")
+
+elif page_selection == "Git / Github":
+    # Exécuter le code du fichier python en utilisant exec()
+    with open("page_github.py", "r", encoding="utf-8") as f:
+        content = f.read()
+    exec(content)
 
 elif page_selection == "Python":
     # Exécuter le code du fichier python en utilisant exec()

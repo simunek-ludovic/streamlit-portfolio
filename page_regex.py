@@ -7,10 +7,10 @@ import streamlit as st
 
 
 # Barre de navigation
-page_selection = st.sidebar.selectbox("Choisissez une partie :", ["Règles de base", "Exemples"], index=0)
+sous_menu = st.sidebar.radio("Choisissez une partie :", ["Règles de base", "Exemples"])
 
 # Affichage de la description générale
-if page_selection == "Règles de base":
+if sous_menu == "Règles de base":
 
     st.write("""Le Regex (ou REGular EXpression) est une séquence de caractères qui forme un modèle de recherche.. Ce modèle est utilisé pour effectuer des recherches et des manipulations de chaînes de caractères (textes) en utilisant des règles spécifiques. Les expressions régulières permettent de :
     - Rechercher des motifs précis dans une chaîne de texte.
@@ -86,7 +86,7 @@ if page_selection == "Règles de base":
     - `[aeiou]` : Correspond à une voyelle en minuscule.
     """)
 
-elif page_selection == "Exemples":
+elif sous_menu == "Exemples":
 
     # Exemple pour tester les caractères de base
     st.write("### Exemple de recherches de caractères")

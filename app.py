@@ -2,13 +2,14 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Mon Portfolio",  # Titre de la page
+    page_icon="📈",
     layout="wide",  # Utilise toute la largeur de l'écran
     initial_sidebar_state="expanded"  # Affiche la barre latérale par défaut
 )
 
 
 # Titre principal du site avec la taille de police ajustée
-st.title("Ludovic Simunek - Mon Portfolio de Data Analyst")
+st.title("Mon Portfolio de Data Analyst")
 
 # Barre de navigation
 page_selection = st.sidebar.radio("Choisissez une page :", ["Accueil", "Python", "PowerBI", "SQL", "Streamlit", "Projets"], index=0)

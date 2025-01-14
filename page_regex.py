@@ -86,22 +86,10 @@ if page_selection == "Règles de base":
     - `[aeiou]` : Correspond à une voyelle en minuscule.
     """)
 
-    # Créer un trait de séparation
-    st.markdown("""
-        <style>
-            hr {
-                border: 1px solid #000000;  /* couleur du trait */
-                margin: 1px 0;             /* espace avant et après le trait */
-                height: 5px;                /* hauteur du trait */
-            }
-        </style>
-        <hr>
-        """, unsafe_allow_html=True)
-
 elif page_selection == "Exemples":
 
     # Exemple pour tester les caractères de base
-    st.write("### Exemple de recherches pour des chiffres")
+    st.write("### Exemple de recherches de caractères")
     with st.expander("Code Regex"):
         st.code("""
         user_input = st.text_input("Entrez une chaîne (...) pour rechercher les chiffres :")
@@ -139,6 +127,9 @@ elif page_selection == "Exemples":
         <hr>
         """, unsafe_allow_html=True)
 
+
+
+    st.write("### Exemple dans un fichier *.csv")
     st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
 
     with st.expander("Convertir ce fichier CSV en DataFrame 'df_csv'"):

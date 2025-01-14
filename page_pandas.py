@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 # https://raw.githubusercontent.com/WCSLeadData/Html/main/online_store_customer_data.csv
 
 # Sous-navigation pour le Projet
-sous_menu = st.sidebar.radio("Naviguez dans la découverte de Pandas :", ["Présentation", "Pré-traitement des données", "Nettoyage des données", "Analyse des données", "Visualisation des données"])
+sous_menu = st.sidebar.radio("Naviguez dans la découverte de Pandas :", ["Présentation et collecte", "Pré-traitement", "Nettoyage", "Analyse", "Visualisation"])
 
 # Contenu en fonction du choix dans le sous-menu
-if sous_menu == "Présentation":
+if sous_menu == "Présentation et collecte":
     st.write("***Pandas*** est une bibliothèque Python très populaire pour la manipulation et l'analyse de données. Elle permet de traiter efficacement des données sous forme de tableaux (similaires aux feuilles de calcul Excel ou aux bases de données SQL")
     st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv) qui contient environ 2500 lignes et 11 colonnes.")
     import pandas as pd
@@ -31,7 +31,7 @@ if sous_menu == "Présentation":
     st.dataframe(df, use_container_width=True)
 
 
-elif sous_menu == "Pré-traitement des données":
+elif sous_menu == "Pré-traitement":
     # Charger le fichier CSV
     df_csv = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
 
@@ -103,7 +103,7 @@ elif sous_menu == "Pré-traitement des données":
         """, language='python')
 
 
-elif sous_menu == "Nettoyage des données":
+elif sous_menu == "Nettoyage":
     # Charger le fichier CSV
     df_csv = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
 
@@ -221,7 +221,8 @@ elif sous_menu == "Nettoyage des données":
     # Code
     with st.expander("Avant traitement : Controler le nombre de valeurs manquantes par colonne"):
         st.code("""
-        df.isnull().sum()
+        df.isnull().sum() # ou
+        df.isna().sum()  # Calcule le nombre de valeurs manquantes (NaN) pour chaque colonne du dataframe.
         """, language="python")            
         st.dataframe(df.isnull().sum(), use_container_width=True)
 
@@ -286,7 +287,7 @@ elif sous_menu == "Nettoyage des données":
         # Afficher les types de données des colonnes
         st.dataframe(df.dtypes, use_container_width=True)
 
-elif sous_menu == "Analyse des données":
+elif sous_menu == "Analyse":
     # Charger le fichier CSV
     df_csv = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/online_store_customer_data.csv")
     
@@ -408,13 +409,14 @@ elif sous_menu == "Analyse des données":
         """, language="python")           
         st.dataframe(pd.crosstab(df.Statut_marital, df.Méthode_paiement, margins=True, margins_name="Total"), use_container_width=True)
 
-elif sous_menu == "Visualisation des données":
+elif sous_menu == "Visualisation":
     st.write("Nous allons parcourir quelques exemples de la **Visualisation des données** :")
 
-    
-    
     # Code
     with st.expander("Afficher un diagramme à barres (Bar plot) sur la répartition des occurrences de la colonne 'Statut_employé'"):
+        st.code("""
+        df["Statut_employé"].value_counts().plot(kind="barh");
+        """, language="python")   
         # Code HTML et CSS pour centrer l'image
         html_code = f"""
         <div style="text-align: center;">
@@ -425,6 +427,9 @@ elif sous_menu == "Visualisation des données":
 
         # Code
     with st.expander("Afficher un diagramme circulaire (Pie plot) sur la répartition des occurrences de la colonne 'Abonnement'"):
+        st.code("""
+        df["Segment"].value_counts().plot(kind="pie");
+        """, language="python")
         # Code HTML et CSS pour centrer l'image
         html_code = f"""
         <div style="text-align: center;">
@@ -435,6 +440,9 @@ elif sous_menu == "Visualisation des données":
 
         # Code
     with st.expander("Afficher un graphique en boite (Box Plot) du 'Montant_dépensé' par 'Statut' ainsi que les valeurs descriptives"):
+        st.code("""
+        df_col_copy.boxplot(by ="Statut_employé", column =["Montant_dépensé"],ax=ax, grid = False);
+        """, language="python")
         # Code HTML et CSS pour centrer l'image
         html_code = f"""
         <div style="text-align: center;">

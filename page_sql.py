@@ -14,8 +14,6 @@ Les fonctionnalités principales de SQL sont :
 5. **Gestion des relations** entre les tables
 """)
 
-st.write("Même si le projet Toys & Models vous permettra de naviguer dans l'univers SQL, je vous présente quelques fonctionnalités :")
-
 # Créer un trait de séparation
 st.markdown("""
     <style>
@@ -27,6 +25,8 @@ st.markdown("""
     </style>
     <hr>
     """, unsafe_allow_html=True)
+
+st.write("Même si le projet Toys & Models vous permettra de naviguer dans l'univers SQL, je vous présente quelques fonctionnalités :")
 
 # Ajouter un expander pour un autre exemple
 with st.expander("Supprimer une base de données 'test'"):

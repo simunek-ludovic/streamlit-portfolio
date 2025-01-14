@@ -98,6 +98,8 @@ if page_selection == "Règles de base":
         <hr>
         """, unsafe_allow_html=True)
 
+elif page_selection == "Exemples":
+
     # Exemple pour tester les caractères de base
     st.write("### Exemple de recherches pour des chiffres")
     with st.expander("Code Regex"):
@@ -136,9 +138,6 @@ if page_selection == "Règles de base":
         </style>
         <hr>
         """, unsafe_allow_html=True)
-
-
-elif page_selection == "Exemples":
 
     st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
 

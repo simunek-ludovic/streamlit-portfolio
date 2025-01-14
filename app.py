@@ -12,6 +12,37 @@ st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.c
 st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/email.png'/> : <a href='mailto:ludovic@simunek.fr'> ludovic@simunek.fr</a></p>", unsafe_allow_html=True)  # Email avec icône et lien mailto
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
+# Chemin du fichier où le compteur sera sauvegardé
+compteur_file = "compteur.txt"
+
+# Fonction pour lire la valeur du compteur depuis le fichier
+def lire_compteur():
+    try:
+        with open(compteur_file, "r") as file:
+            compteur = int(file.read())
+    except FileNotFoundError:
+        compteur = 0  # Si le fichier n'existe pas, commencer avec 0
+    return compteur
+
+# Fonction pour enregistrer la valeur du compteur dans le fichier
+def enregistrer_compteur(compteur):
+    with open(compteur_file, "w") as file:
+        file.write(str(compteur))
+
+# Lecture du compteur à partir du fichier
+compteur = lire_compteur()
+
+# Créer le bouton "J'aime" dans la colonne du milieu
+if st.sidebar.button("J'aime"):
+    compteur += 1  # Incrémentation du compteur
+    enregistrer_compteur(compteur)  # Enregistrer la nouvelle valeur dans le fichier
+
+# Affichage du compteur dans la sidebar
+st.sidebar.markdown(
+    f"<p style='text-align: left'>Nombre de Likes : {compteur}</p>", 
+    unsafe_allow_html=True
+)
+
 # Titre principal du site avec la taille de police ajustée
 st.title("Mon Portfolio de Data Analyst")
 

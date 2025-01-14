@@ -129,7 +129,7 @@ elif page_selection == "Exemples":
 
 
 
-    st.write("### Exemple dans un fichier *.csv")
+    st.write("### Exemples dans un fichier")
     st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
 
     with st.expander("Convertir ce fichier CSV en DataFrame 'df_csv'"):

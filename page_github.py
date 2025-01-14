@@ -4,8 +4,8 @@ st.header("Github / Git")
 st.write("GitHub est une plateforme en ligne qui permet de stocker et de partager des projets Git. Les fonctionnalités principales de GitHub sont :")
 st.write("""
 - Hébergement des dépôts : GitHub stocke vos projets Git dans le cloud, accessibles depuis n’importe où.
-Travail collaboratif : Les équipes peuvent travailler ensemble sur des projets en utilisant des outils comme les "pull requests" et les "issues".
-Partage public ou privé : Les projets peuvent être publics (visibles par tout le monde) ou privés (accès restreint).
+- Travail collaboratif : Les équipes peuvent travailler ensemble sur des projets en utilisant des outils comme les "pull requests" et les "issues".
+- Partage public ou privé : Les projets peuvent être publics (visibles par tout le monde) ou privés (accès restreint).
 """)
 
 # Créer un trait de séparation

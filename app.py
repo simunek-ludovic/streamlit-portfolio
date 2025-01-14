@@ -1,12 +1,16 @@
 import streamlit as st
 
+
 st.set_page_config(
     page_title="Mon Portfolio",  # Titre de la page
     page_icon="📈",
     layout="wide",  # Utilise toute la largeur de l'écran
     initial_sidebar_state="expanded"  # Affiche la barre latérale par défaut
 )
-
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/user.png'/> : <strong>SIMUNEK Ludovic</strong></p>", unsafe_allow_html=True)  # Nom avec icône de personnage
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/phone.png'/> : 06 51 52 42 33</p>", unsafe_allow_html=True)  # Téléphone avec icône
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/email.png'/> : <a href='mailto:ludovic@simunek.fr'> ludovic@simunek.fr</a></p>", unsafe_allow_html=True)  # Email avec icône et lien mailto
+st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
 # Titre principal du site avec la taille de police ajustée
 st.title("Mon Portfolio de Data Analyst")
@@ -26,12 +30,8 @@ if page_selection == "Accueil":
     st.write("Cette reconversion me permet de combiner mon expérience de gestion des données avec les outils actuels pour répondre aux enjeux actuels des entreprises.")
     st.write("Doté d’un esprit rigoureux et orienté solutions, je suis déterminé à accompagner les organisations dans l’exploitation de leurs données et à apporter une valeur ajoutée grâce à mes nouvelles compétences de Data Analyst.")
     st.write("N'hésitez pas à naviguer sur les différents projets qui illustrent la partie technique de mon activité.")
-    st.write("Ludovic Simunek")
+    st.write("Ludovic")
 
-    st.header("Contactez-moi")
-    st.write("Mail : ludovic@simunek.fr")
-    st.write("Téléphone : 06 51 52 42 33")
-    st.write("https://www.linkedin.com/in/ludovic-simunek/")
 
 elif page_selection == "Git / Github":
     # Exécuter le code du fichier python en utilisant exec()
@@ -68,3 +68,4 @@ elif page_selection == "Projets":
     with open("page_projets.py", "r", encoding="utf-8") as f:
         content = f.read()
     exec(content)
+

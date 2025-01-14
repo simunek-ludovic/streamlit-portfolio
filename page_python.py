@@ -2,7 +2,7 @@
 st.header("Python")
 
 # Barre de navigation
-page_selection = st.sidebar.selectbox("Choisissez une des bibliothèques :", ["Python", "NLP", "Pandas", "Regex", "Webscraping"], index=0)
+page_selection = st.sidebar.selectbox("Choisissez une des bibliothèques :", ["Python", "Machine Learning", "NLP", "Pandas", "Regex", "Webscraping"], index=0)
 
 # Affichage de la description générale de Python, sauf si la page Pandas ou Matplotlib est sélectionnée
 if page_selection == "Python":
@@ -22,6 +22,14 @@ if page_selection == "Python":
     """)
 
     st.write("Je vous propose de découvrir ces bibliothèques en naviguant dans celle de votre choix")
+
+# Affichage de la page sélectionnée
+elif page_selection == "Machine Learning":
+    st.write("### Machine Learning")
+    # Exécuter le code du fichier python en utilisant exec()
+    with open("page_machine_learning.py", "r", encoding="utf-8") as f:
+        content = f.read()
+    exec(content)
 
 # Affichage de la page sélectionnée
 elif page_selection == "NLP":

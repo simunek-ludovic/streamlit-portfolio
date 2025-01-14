@@ -93,8 +93,14 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Exemple pour tester les caractères de base
-st.write("### Exemple de recherche avec des caractères de base")
+st.write("### Exemple de recherches")
 user_input = st.text_input("Entrez une chaîne pour rechercher les chiffres :")
+
+with st.expander("Code Regex"):
+    st.code("""
+    chiffres = re.findall(r"\d+", user_input)
+    """, language='python')
+
 if user_input:
     # Exemple de recherche de chiffres
     chiffres = re.findall(r"\d+", user_input)

@@ -96,13 +96,11 @@ st.markdown("""
 st.write("### Exemple de recherches")
 with st.expander("Code Regex"):
     st.code("""
-    user_input = st.text_input("Entrez une chaîne pour rechercher les chiffres :")
+    user_input = st.text_input("Entrez une chaîne (peu importe chiffres, lettres (minuscules et/ou majuscules), caractères spéciaux, ...) pour rechercher les chiffres :")
     chiffres = re.findall(r"\d+", user_input)
     """, language='python')
 
-
 user_input = st.text_input("Entrez une chaîne pour rechercher les chiffres :")
-
 
 if user_input:
     # Exemple de recherche de chiffres
@@ -114,8 +112,8 @@ if user_input:
 st.write("### Exemple de recherche de lettres")
 user_input2 = st.text_input("Entrez une chaîne pour rechercher les voyelles :")
 if user_input2:
-    vowels = re.findall(r"[aeiou]", user_input2)
-    st.write(f"Les voyelles extraites sont : {vowels}")
+    voyelles = re.findall(r"[aeiou]", user_input2)
+    st.write(f"Les voyelles extraites sont : {voyelles}")
 
 # Créer un trait de séparation
 st.markdown("""

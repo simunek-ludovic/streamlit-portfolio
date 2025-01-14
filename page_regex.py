@@ -93,14 +93,14 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Exemple pour tester les caractères de base
-st.write("### Exemple de recherches")
+st.write("### Exemple de recherches pour des chiffres")
 with st.expander("Code Regex"):
     st.code("""
     user_input = st.text_input("Entrez une chaîne (...) pour rechercher les chiffres :")
     chiffres = re.findall(r"\d+", user_input)
     """, language='python')
 
-user_input = st.text_input("Entrez une chaîne (peu importe chiffres, lettres (minuscules et/ou majuscules), caractères spéciaux, ...) pour rechercher les chiffres :")
+user_input = st.text_input("Entrez une chaîne (peu importe chiffres, lettres (minuscules et/ou majuscules), caractères spéciaux, ...) pour rechercher les chiffres (et taper entrée) :")
 
 if user_input:
     # Exemple de recherche de chiffres
@@ -109,8 +109,13 @@ if user_input:
 
 
 # Exemple interactif pour tester une classe de caractères
-st.write("### Exemple de recherche de lettres")
-user_input2 = st.text_input("Entrez une chaîne pour rechercher les voyelles :")
+with st.expander("Code Regex"):
+    st.code("""
+    user_input2 = st.text_input("Entrez une chaîne pour rechercher les voyelles écrites en minuscules :")
+    voyelles = re.findall(r"[aeiou]", user_input2)
+    """, language='python')
+
+user_input2 = st.text_input("Entrez une chaîne pour rechercher les voyelles écrites en minuscules :")
 if user_input2:
     voyelles = re.findall(r"[aeiou]", user_input2)
     st.write(f"Les voyelles extraites sont : {voyelles}")

@@ -17,7 +17,7 @@ st.write("""Le Regex (ou REGular EXpression) est une séquence de caractères qu
 st.write("""Les expressions régulières sont un puissant outil pour manipuler les chaînes de caractères. Voici un guide détaillé pour comprendre les principales syntaxes utilisées dans les regex.""")
 
 # Section 1 : Caractères de base
-st.write("### Caractères de base")
+st.write("# Caractères de base")
 
 # Définition et exemple pour chaque caractère
 st.write("""
@@ -31,14 +31,6 @@ st.write("""
 - `\\b` : Correspond à une frontière de mot (espace ou ponctuation avant ou après un mot).
 - `\\B` : Correspond à tout endroit qui n'est pas une frontière de mot.
 """)
-
-# Exemple pour tester les caractères de base
-st.write("### Exemple de recherche avec des caractères de base")
-user_input = st.text_input("Entrez une chaîne pour rechercher les chiffres :")
-if user_input:
-    # Exemple de recherche de chiffres
-    digits = re.findall(r"\d+", user_input)
-    st.write(f"Les chiffres extraits sont : {digits}")
 
 # Section 2 : Quantificateurs
 st.write("### 2. Quantificateurs")
@@ -88,28 +80,47 @@ st.write("""
 - `[aeiou]` : Correspond à une voyelle en minuscule.
 """)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Créer un trait de séparation
+st.markdown("""
+    <style>
+        hr {
+            border: 1px solid #000000;  /* couleur du trait */
+            margin: 1px 0;             /* espace avant et après le trait */
+            height: 5px;                /* hauteur du trait */
+        }
+    </style>
+    <hr>
+    """, unsafe_allow_html=True)
+
+# Exemple pour tester les caractères de base
+st.write("# Exemple de recherche avec des caractères de base")
+user_input = st.text_input("Entrez une chaîne pour rechercher les chiffres :")
+if user_input:
+    # Exemple de recherche de chiffres
+    digits = re.findall(r"\d+", user_input)
+    st.write(f"Les chiffres extraits sont : {digits}")
+
+
 # Exemple interactif pour tester une classe de caractères
 st.write("### Exemple de recherche de lettres")
 user_input2 = st.text_input("Entrez une chaîne pour rechercher les voyelles :")
 if user_input2:
     vowels = re.findall(r"[aeiou]", user_input2)
     st.write(f"Les voyelles extraites sont : {vowels}")
-
-# Conclusion
-st.write("""
-### Conclusion
-Les expressions régulières peuvent paraître complexes au début, mais elles sont extrêmement puissantes pour manipuler et extraire des informations à partir de chaînes de caractères. En explorant chaque élément, tu peux mieux comprendre comment les utiliser dans différents cas d'usage.
-""")
-
-
-
-
-
-
-
-
-
-
 
 # Créer un trait de séparation
 st.markdown("""

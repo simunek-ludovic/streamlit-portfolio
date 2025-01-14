@@ -89,7 +89,7 @@ if sous_menu == "Règles de base":
 elif sous_menu == "Exemples":
 
     # Exemple pour tester les caractères de base
-    st.write("### Exemple de recherches de caractères")
+    st.write("### Exemple de recherche de caractères")
     with st.expander("Code Regex"):
         st.code("""
         user_input = st.text_input("Entrez une chaîne (...) pour rechercher les chiffres :")
@@ -127,7 +127,7 @@ elif sous_menu == "Exemples":
         <hr>
         """, unsafe_allow_html=True)
 
-    st.write("### Exemples dans un fichier")
+    st.write("### Exemple de recherche dans un fichier")
     st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
 
     with st.expander("Convertir ce fichier CSV en DataFrame 'df_csv'"):

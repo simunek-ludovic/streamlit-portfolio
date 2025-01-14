@@ -12,6 +12,149 @@ st.write("""Le Regex (ou REGular EXpression) est une séquence de caractères qu
 - Valider des entrées comme des emails, des numéros de téléphone, des formats de date, etc...
 """)
 
+# Créer un trait de séparation
+st.markdown("""
+    <style>
+        hr {
+            border: 1px solid #000000;  /* couleur du trait */
+            margin: 1px 0;             /* espace avant et après le trait */
+            height: 5px;                /* hauteur du trait */
+        }
+    </style>
+    <hr>
+    """, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import streamlit as st
+import re
+
+# Titre de la page
+st.title("Guide des Expressions Régulières (Regex)")
+
+# Explication générale
+st.write("""
+Les expressions régulières sont un puissant outil pour manipuler les chaînes de caractères. Voici un guide détaillé pour comprendre les principales syntaxes utilisées dans les regex.
+""")
+
+# Section 1 : Caractères de base
+st.write("### 1. Caractères de base")
+
+# Définition et exemple pour chaque caractère
+st.write("""
+- `.` : Correspond à n'importe quel caractère (sauf un saut de ligne).
+- `\\d` : Correspond à un chiffre (0-9).
+- `\\D` : Correspond à tout caractère qui n'est pas un chiffre.
+- `\\w` : Correspond à un caractère alphanumérique (lettre, chiffre, ou `_`).
+- `\\W` : Correspond à tout caractère non alphanumérique.
+- `\\s` : Correspond à un espace, une tabulation ou un saut de ligne.
+- `\\S` : Correspond à tout caractère qui n'est pas un espace.
+- `\\b` : Correspond à une frontière de mot (espace ou ponctuation avant ou après un mot).
+- `\\B` : Correspond à tout endroit qui n'est pas une frontière de mot.
+""")
+
+# Exemple pour tester les caractères de base
+st.write("### Exemple de recherche avec des caractères de base")
+user_input = st.text_input("Entrez une chaîne pour rechercher les chiffres :")
+if user_input:
+    # Exemple de recherche de chiffres
+    digits = re.findall(r"\d+", user_input)
+    st.write(f"Les chiffres extraits sont : {digits}")
+
+# Section 2 : Quantificateurs
+st.write("### 2. Quantificateurs")
+
+# Définition et exemple pour chaque quantificateur
+st.write("""
+- `*` : Correspond à zéro ou plusieurs occurrences du caractère précédent.
+- `+` : Correspond à une ou plusieurs occurrences du caractère précédent.
+- `?` : Correspond à zéro ou une occurrence du caractère précédent.
+- `{n}` : Correspond exactement à `n` occurrences du caractère précédent.
+- `{n,}` : Correspond à `n` occurrences ou plus du caractère précédent.
+- `{n,m}` : Correspond entre `n` et `m` occurrences du caractère précédent.
+""")
+
+# Section 3 : Caractères de groupe et de sélection
+st.write("### 3. Caractères de groupe et de sélection")
+
+# Définition et exemple pour chaque caractère de groupe
+st.write("""
+- `[]` : Délimite un groupe de caractères. Exemple : `[abc]` correspond à "a", "b" ou "c".
+- `[^]` : Négation d'un groupe. Exemple : `[^abc]` correspond à tout caractère sauf "a", "b" ou "c".
+- `|` : Opérateur ou. Exemple : `abc|def` correspond à "abc" ou "def".
+- `()` : Délimite un groupe de capture. Exemple : `(abc)+` correspond à "abc" une ou plusieurs fois.
+""")
+
+# Section 4 : Position et ancrage
+st.write("### 4. Position et ancrage")
+
+# Définition et exemple pour chaque position et ancrage
+st.write("""
+- `^` : Correspond au début d'une chaîne.
+- `$` : Correspond à la fin d'une chaîne.
+- `\\A` : Correspond au début d'une chaîne (indépendant des lignes).
+- `\\Z` : Correspond à la fin d'une chaîne (indépendant des lignes).
+- `\\z` : Correspond à la fin de la chaîne, incluant les sauts de ligne.
+""")
+
+# Section 5 : Classes de caractères
+st.write("### 5. Classes de caractères")
+
+# Définition et exemple pour chaque classe de caractères
+st.write("""
+- `[a-z]` : Correspond à une lettre minuscule de `a` à `z`.
+- `[A-Z]` : Correspond à une lettre majuscule de `A` à `Z`.
+- `[0-9]` : Correspond à un chiffre de `0` à `9`.
+- `[a-zA-Z]` : Correspond à une lettre, qu'elle soit minuscule ou majuscule.
+- `[aeiou]` : Correspond à une voyelle en minuscule.
+""")
+
+# Exemple interactif pour tester une classe de caractères
+st.write("### Exemple de recherche de lettres")
+user_input2 = st.text_input("Entrez une chaîne pour rechercher les voyelles :")
+if user_input2:
+    vowels = re.findall(r"[aeiou]", user_input2)
+    st.write(f"Les voyelles extraites sont : {vowels}")
+
+# Conclusion
+st.write("""
+### Conclusion
+Les expressions régulières peuvent paraître complexes au début, mais elles sont extrêmement puissantes pour manipuler et extraire des informations à partir de chaînes de caractères. En explorant chaque élément, tu peux mieux comprendre comment les utiliser dans différents cas d'usage.
+""")
+
+
+
+
+
+
+
+
+
+
+
+# Créer un trait de séparation
+st.markdown("""
+    <style>
+        hr {
+            border: 1px solid #000000;  /* couleur du trait */
+            margin: 1px 0;             /* espace avant et après le trait */
+            height: 5px;                /* hauteur du trait */
+        }
+    </style>
+    <hr>
+    """, unsafe_allow_html=True)
+
 st.write("Nous allons travailler avec ce fichier [CSV](https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/candidates_df.csv) qui contient environ 260 lignes et 8 colonnes.")
 
 with st.expander("Convertir ce fichier CSV en DataFrame 'df_csv'"):

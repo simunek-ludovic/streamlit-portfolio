@@ -17,7 +17,7 @@ st.write("""Le Regex (ou REGular EXpression) est une séquence de caractères qu
 st.write("""Les expressions régulières sont un puissant outil pour manipuler les chaînes de caractères. Voici un guide détaillé pour comprendre les principales syntaxes utilisées dans les regex.""")
 
 # Section 1 : Caractères de base
-st.write("# Caractères de base")
+st.write("Caractères de base")
 
 # Définition et exemple pour chaque caractère
 st.write("""
@@ -33,7 +33,7 @@ st.write("""
 """)
 
 # Section 2 : Quantificateurs
-st.write("### 2. Quantificateurs")
+st.write("Quantificateurs")
 
 # Définition et exemple pour chaque quantificateur
 st.write("""
@@ -46,7 +46,7 @@ st.write("""
 """)
 
 # Section 3 : Caractères de groupe et de sélection
-st.write("### 3. Caractères de groupe et de sélection")
+st.write("Caractères de groupe et de sélection")
 
 # Définition et exemple pour chaque caractère de groupe
 st.write("""
@@ -57,7 +57,7 @@ st.write("""
 """)
 
 # Section 4 : Position et ancrage
-st.write("### 4. Position et ancrage")
+st.write("Position et ancrage")
 
 # Définition et exemple pour chaque position et ancrage
 st.write("""
@@ -69,7 +69,7 @@ st.write("""
 """)
 
 # Section 5 : Classes de caractères
-st.write("### 5. Classes de caractères")
+st.write("Classes de caractères")
 
 # Définition et exemple pour chaque classe de caractères
 st.write("""
@@ -79,20 +79,6 @@ st.write("""
 - `[a-zA-Z]` : Correspond à une lettre, qu'elle soit minuscule ou majuscule.
 - `[aeiou]` : Correspond à une voyelle en minuscule.
 """)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Créer un trait de séparation
 st.markdown("""

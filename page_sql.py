@@ -29,6 +29,13 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Ajouter un expander pour un autre exemple
+with st.expander("Supprimer une base de données 'test'"):
+    drop_database = """
+    DROP DATABASE test;
+    """
+    st.code(drop_database, language="sql")
+
+# Ajouter un expander pour un autre exemple
 with st.expander("Créer une base de données 'demo'"):
     create_database = """
     CREATE DATABASE demo;

@@ -119,4 +119,3 @@ elif page_selection == "Projets":
     with open("page_projets.py", "r", encoding="utf-8") as f:
         content = f.read()
     exec(content)
-

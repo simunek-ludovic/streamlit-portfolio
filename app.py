@@ -23,42 +23,41 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-# Création d'un expander dans la barre latérale
-with st.sidebar.expander("Contactez moi", expanded=False):  # Tu peux ajuster le titre du panneau
-    # Afficher l'image de profil et ton nom dans l'expander
-    st.markdown(
-        """
-        <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGomjyiBWFb1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1701427770915?e=2147483647&v=beta&t=vMUouV4yfe2IRYuX3psMCp9iJv_HIgvNbiT1lH-h-OU" 
-                 alt="Photo de profil" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
-        </div>
-        <p style="margin: 0; font-weight: bold; font-size: 14px;">
-            <img src="https://img.icons8.com/ios-filled/16/000000/user.png"/> : <strong>SIMUNEK Ludovic</strong>
-        </p>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    # Téléphone avec icône
-    st.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/phone.png'/> : 06 51 52 42 33</p>", unsafe_allow_html=True)
 
-    # Email avec icône et lien mailto
-    st.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/email.png'/> : <a href='mailto:ludovic@simunek.fr'> ludovic@simunek.fr</a></p>", unsafe_allow_html=True)
-
-    # Lien vers le CV avec icônes de lecture et de téléchargement
-    st.markdown(""" 
-    <p style='margin-bottom: 0;'>
-    <img src="https://img.icons8.com/ios-glyphs/16/000000/resume.png" alt="resume" /> CV : 
-    <a href='https://github.com/simunek-ludovic/streamlit-portfolio/blob/main/docs/CV%20-%20SIMUNEK%20Ludovic.pdf' target='_blank'>Lire</a> | 
-    <a href='https://github.com/simunek-ludovic/streamlit-portfolio/raw/main/docs/CV%20-%20SIMUNEK%20Ludovic.pdf' download> Télécharger</a>
+# Afficher l'image de profil et ton nom dans l'expander
+st.sidebar.markdown(
+    """
+    <div style="text-align: center; margin-bottom: 1rem;">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGomjyiBWFb1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1701427770915?e=2147483647&v=beta&t=vMUouV4yfe2IRYuX3psMCp9iJv_HIgvNbiT1lH-h-OU" 
+                alt="Photo de profil" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
+    </div>
+    <p style="margin: 0; font-weight: bold; font-size: 14px;">
+        <img src="https://img.icons8.com/ios-filled/16/000000/user.png"/> : <strong>SIMUNEK Ludovic</strong>
     </p>
-    """, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-    # LinkedIn avec icône et lien
-    st.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/linkedin.png'/> : <a href='https://www.linkedin.com/in/ludovic-simunek/' target='_blank'>Mon LinkedIn</a></p>", unsafe_allow_html=True)
+# Téléphone avec icône
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/phone.png'/> : 06 51 52 42 33</p>", unsafe_allow_html=True)
 
-    # GitHub avec icône et lien
-    st.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-glyphs/16/000000/github.png'/> : <a href='https://github.com/simunek-ludovic' target='_blank'>Mon GitHub</a></p>", unsafe_allow_html=True)
+# Email avec icône et lien mailto
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/email.png'/> : <a href='mailto:ludovic@simunek.fr'> ludovic@simunek.fr</a></p>", unsafe_allow_html=True)
+
+# Lien vers le CV avec icônes de lecture et de téléchargement
+st.sidebar.markdown(""" 
+<p style='margin-bottom: 0;'>
+<img src="https://img.icons8.com/ios-glyphs/16/000000/resume.png" alt="resume" /> CV : 
+<a href='https://github.com/simunek-ludovic/streamlit-portfolio/blob/main/docs/CV%20-%20SIMUNEK%20Ludovic.pdf' target='_blank'>Lire</a> | 
+<a href='https://github.com/simunek-ludovic/streamlit-portfolio/raw/main/docs/CV%20-%20SIMUNEK%20Ludovic.pdf' download> Télécharger</a>
+</p>
+""", unsafe_allow_html=True)
+
+# LinkedIn avec icône et lien
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-filled/16/000000/linkedin.png'/> : <a href='https://www.linkedin.com/in/ludovic-simunek/' target='_blank'>Mon LinkedIn</a></p>", unsafe_allow_html=True)
+
+# GitHub avec icône et lien
+st.sidebar.markdown("<p style='margin-bottom: 0;'><img src='https://img.icons8.com/ios-glyphs/16/000000/github.png'/> : <a href='https://github.com/simunek-ludovic' target='_blank'>Mon GitHub</a></p>", unsafe_allow_html=True)
 
 
 st.sidebar.markdown("<br>", unsafe_allow_html=True)

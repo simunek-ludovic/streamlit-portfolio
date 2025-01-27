@@ -26,3 +26,26 @@ buttonColor = "#ffffff"  # Texte des boutons en blanc pour un bon contraste
 
 # Bordure des boutons (bleu, en harmonie avec le fond des boutons)
 buttonBorderColor = "#007bff"  # Bordure bleue pour les boutons pour maintenir la cohérence
+
+# Couleur des sliders (dégradé de bleu accessible pour l'interactivité)
+sliderColor = "#007bff"  # Couleur bleue pour les sliders pour qu'ils ressortent bien
+
+# Couleur de la barre de sélection des sliders (pointe et remplissage)
+sliderTrackColor = "#b8daff"  # Bleu clair pour la barre de fond du slider, pas trop agressif
+
+# Couleur des checkboxes (gris foncé pour le contraste, avec bleu pour l'interaction)
+checkboxColor = "#007bff"  # Bleu pour les cases sélectionnées
+
+# Couleur des boutons radio (bleu, pour l'interaction, mais pas trop vif)
+radioButtonColor = "#007bff"  # Bleu pour les boutons radio
+
+# Couleur des sélecteurs de dates (gris très clair pour les éléments non sélectionnés, bleu pour l'interaction)
+dateSelectorColor = "#007bff"  # Bleu pour les éléments sélectionnés
+
+# Couleur des champs de texte (gris clair pour le fond, texte foncé)
+inputFieldBackgroundColor = "#ffffff"  # Fond des champs de texte en blanc
+inputFieldTextColor = "#495057"  # Texte dans les champs de saisie, gris foncé pour le contraste
+
+# Couleur des éléments de dropdown (similaire aux autres éléments interactifs)
+selectboxColor = "#007bff"  # Bleu pour les menus déroulants sélectionnés
+selectboxBackgroundColor = "#ffffff"  # Fond blanc pour la sélection des options

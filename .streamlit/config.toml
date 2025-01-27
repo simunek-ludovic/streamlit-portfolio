@@ -1,0 +1,28 @@
+[theme]
+# Couleur d'arrière-plan principale (gris très clair)
+backgroundColor = "#f8f9fa"  # Un fond gris clair, facile à lire et apaisant
+
+# Couleur du texte (gris foncé, contraste bien avec le fond clair)
+textColor = "#212529"  # Gris foncé, qui a un bon contraste avec un fond clair
+
+# Couleur d'arrière-plan secondaire (gris clair pour les sections)
+secondaryBackgroundColor = "#e9ecef"  # Gris légèrement plus foncé pour les sections secondaires
+
+# Couleur des boutons (bleu vif mais accessible)
+primaryColor = "#007bff"  # Bleu vif (couleur bien visible pour les boutons et actions)
+
+# Couleur de la barre latérale (gris clair avec texte foncé)
+sidebarBackgroundColor = "#e9ecef"  # Même couleur que pour le fond secondaire
+sidebarTextColor = "#495057"  # Gris moyen pour le texte de la barre latérale
+
+# Bordure des éléments de la barre latérale et des cartes (gris neutre)
+borderColor = "#ced4da"  # Gris très clair, agréable visuellement sans trop de contraste
+
+# Couleur des liens (bleu foncé, pour bien ressortir mais être agréable)
+linkColor = "#0056b3"  # Bleu foncé pour les liens et éléments cliquables
+
+# Texte des boutons (blanc pour ressortir sur fond bleu)
+buttonColor = "#ffffff"  # Texte des boutons en blanc pour un bon contraste
+
+# Bordure des boutons (bleu, en harmonie avec le fond des boutons)
+buttonBorderColor = "#007bff"  # Bordure bleue pour les boutons pour maintenir la cohérence

@@ -167,7 +167,7 @@ with st.sidebar.expander("Filtrer la base de données", expanded=False):
             liste_titres = [titre for titre in liste_titres if normaliser_chaine(titre[0].upper()) == lettre_selectionnee]
 
     # Afficher la liste des titres filtrés avec la longueur en rouge et gras
-    st.sidebar.markdown(f"Films dans la base de données : <span style='color:#0056b3; font-weight:bold;'>{len(liste_titres)}</span>", unsafe_allow_html=True)
+    st.sidebar.markdown(f"Films dans la base de données : <span style='color:#007bff; font-weight:bold;'>{len(liste_titres)}</span>", unsafe_allow_html=True)
 
     if len(liste_titres) == 0:
         st.error("Aucun film ne correspond aux filtres actuels.")

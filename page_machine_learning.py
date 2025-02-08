@@ -611,9 +611,9 @@ elif sous_menu == "Classification":
     # Affichage de la matrice de confusion dans Streamlit
     st.dataframe(conf_matrix_df, use_container_width=True)
 
-    st.write("138 vrais positifs (réel : décédé / prévision : décédé)")
+    st.write("140 vrais positifs (réel : décédé / prévision : décédé)")
     st.write("76 vrais négatifs (réel : survivant / prévision : survivant)")
-    st.write("23 faux positifs (réel : décédé / prévision : survivant)")
+    st.write("21 faux positifs (réel : décédé / prévision : survivant)")
     st.write("30 faux négatifs (réel : surivant / prévision : décédé)")
 
 

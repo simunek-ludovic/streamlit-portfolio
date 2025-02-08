@@ -46,22 +46,27 @@ elif sous_menu == "Régression":
     st.write("Cette méthode est souvent utilisée pour résoudre des problèmes de régression, tels que la prédiction du prix d'une maison en fonction de ses caractéristiques.")
 
     import pandas as pd
-    from sklearn.linear_model import LinearRegression
-    from sklearn.model_selection import train_test_split
-    from sklearn.metrics import r2_score
-    data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ';', encoding='utf-8')
+    import streamlit as st
 
-    with st.expander("Convertir ce fichier CSV en DataFrame et importation des bibliothèques nécessaires"):
-        st.code("""
-        import pandas as pd
-        from sklearn.linear_model import LinearRegression
-        from sklearn.model_selection import train_test_split
-        from sklearn.metrics import r2_score
-        data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ';')    
-        """, language='python')
+    # Lire le fichier CSV avec le bon séparateur et l'encodage approprié
+    url = "https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv"
+    data = pd.read_csv(url, sep=';', encoding='utf-8')
 
-    # Afficher le DataFrame dans Streamlit
-    st.dataframe(data, use_container_width=True)
+    # Vérifier les colonnes du DataFrame
+    st.write("Colonnes du DataFrame :")
+    st.write(data.columns)
+
+    # Afficher un aperçu du DataFrame
+    st.dataframe(data.head(), use_container_width=True)
+
+    # Vérifier si les colonnes spécifiques existent avant d'y accéder
+    required_columns = ['density', 'residual sugar', 'total sulfur dioxide']
+    missing_columns = [col for col in required_columns if col not in data.columns]
+
+    if missing_columns:
+        st.warning(f"Les colonnes suivantes sont manquantes : {', '.join(missing_columns)}")
+    else:
+        st.success("Toutes les colonnes sont présentes.")
 
 
     # Définir les X et les y

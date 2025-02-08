@@ -1,51 +1,15 @@
 [theme]
-# Couleur d'arrière-plan principale (gris très clair)
-backgroundColor = "#f8f9fa"  # Un fond gris clair, facile à lire et apaisant
+# Couleur d'arrière-plan principale
+backgroundColor = "#f8f9fa"
 
-# Couleur du texte (gris foncé, contraste bien avec le fond clair)
-textColor = "#212529"  # Gris foncé, qui a un bon contraste avec un fond clair
+# Couleur du texte
+textColor = "#212529"
 
-# Couleur d'arrière-plan secondaire (gris clair pour les sections)
-secondaryBackgroundColor = "#e9ecef"  # Gris légèrement plus foncé pour les sections secondaires
+# Couleur d'arrière-plan secondaire
+secondaryBackgroundColor = "#e9ecef"
 
-# Couleur des boutons (bleu vif mais accessible)
-primaryColor = "#007bff"  # Bleu vif (couleur bien visible pour les boutons et actions)
+# Couleur principale (utilisée pour les boutons, sliders, etc.)
+primaryColor = "#007bff"
 
-# Couleur de la barre latérale (gris clair avec texte foncé)
-sidebarBackgroundColor = "#e9ecef"  # Même couleur que pour le fond secondaire
-sidebarTextColor = "#495057"  # Gris moyen pour le texte de la barre latérale
-
-# Bordure des éléments de la barre latérale et des cartes (gris neutre)
-borderColor = "#ced4da"  # Gris très clair, agréable visuellement sans trop de contraste
-
-# Couleur des liens (bleu foncé, pour bien ressortir mais être agréable)
-linkColor = "#0056b3"  # Bleu foncé pour les liens et éléments cliquables
-
-# Texte des boutons (blanc pour ressortir sur fond bleu)
-buttonColor = "#ffffff"  # Texte des boutons en blanc pour un bon contraste
-
-# Bordure des boutons (bleu, en harmonie avec le fond des boutons)
-buttonBorderColor = "#007bff"  # Bordure bleue pour les boutons pour maintenir la cohérence
-
-# Couleur des sliders (dégradé de bleu accessible pour l'interactivité)
-sliderColor = "#007bff"  # Couleur bleue pour les sliders pour qu'ils ressortent bien
-
-# Couleur de la barre de sélection des sliders (pointe et remplissage)
-sliderTrackColor = "#b8daff"  # Bleu clair pour la barre de fond du slider, pas trop agressif
-
-# Couleur des checkboxes (gris foncé pour le contraste, avec bleu pour l'interaction)
-checkboxColor = "#007bff"  # Bleu pour les cases sélectionnées
-
-# Couleur des boutons radio (bleu, pour l'interaction, mais pas trop vif)
-radioButtonColor = "#007bff"  # Bleu pour les boutons radio
-
-# Couleur des sélecteurs de dates (gris très clair pour les éléments non sélectionnés, bleu pour l'interaction)
-dateSelectorColor = "#007bff"  # Bleu pour les éléments sélectionnés
-
-# Couleur des champs de texte (gris clair pour le fond, texte foncé)
-inputFieldBackgroundColor = "#ffffff"  # Fond des champs de texte en blanc
-inputFieldTextColor = "#495057"  # Texte dans les champs de saisie, gris foncé pour le contraste
-
-# Couleur des éléments de dropdown (similaire aux autres éléments interactifs)
-selectboxColor = "#007bff"  # Bleu pour les menus déroulants sélectionnés
-selectboxBackgroundColor = "#ffffff"  # Fond blanc pour la sélection des options
+# Police d'écriture (optionnelle, valeurs possibles : "sans serif", "serif", "monospace")
+font = "sans serif"

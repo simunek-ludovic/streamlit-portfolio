@@ -72,7 +72,7 @@ st.sidebar.markdown("<br>", unsafe_allow_html=True)
 st.title("Mon Portfolio de Data Analyst")
 
 # Barre de navigation
-page_selection = st.sidebar.radio("Choisissez une thématique :", ["Accueil", "Git / Github", "Python", "PowerBI", "SQL", "Streamlit", "Projets"], index=0)
+page_selection = st.sidebar.radio("Choisissez une thématique :", ["Accueil", "Git / Github", "Machine Learning", "Python", "PowerBI", "SQL", "Streamlit", "Projets"], index=0)
 
 # Affichage de la page sélectionnée
 if page_selection == "Accueil":
@@ -92,6 +92,12 @@ if page_selection == "Accueil":
 elif page_selection == "Git / Github":
     # Exécuter le code du fichier python en utilisant exec()
     with open("page_github.py", "r", encoding="utf-8") as f:
+        content = f.read()
+    exec(content)
+
+elif page_selection == "Machine Learning":
+    # Exécuter le code du fichier python en utilisant exec()
+    with open("page_machine_learning.py", "r", encoding="utf-8") as f:
         content = f.read()
     exec(content)
 

@@ -49,7 +49,7 @@ elif sous_menu == "Régression":
     from sklearn.linear_model import LinearRegression
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import r2_score
-    data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ',')
+    data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ';')
 
     with st.expander("Convertir ce fichier CSV en DataFrame et importation des bibliothèques nécessaires"):
         st.code("""
@@ -57,7 +57,7 @@ elif sous_menu == "Régression":
         from sklearn.linear_model import LinearRegression
         from sklearn.model_selection import train_test_split
         from sklearn.metrics import r2_score
-        data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ',')    
+        data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ';')    
         """, language='python')
 
     # Afficher le DataFrame dans Streamlit

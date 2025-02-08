@@ -49,7 +49,7 @@ elif sous_menu == "Régression":
     from sklearn.linear_model import LinearRegression
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import r2_score
-    data = pd.read_csv("https://raw.githubusercontent.com/GMDFr/Dataset/main/winequality-white.csv", sep = ';')
+    data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ';')
 
     with st.expander("Convertir ce fichier CSV en DataFrame et importation des bibliothèques nécessaires"):
         st.code("""
@@ -57,7 +57,7 @@ elif sous_menu == "Régression":
         from sklearn.linear_model import LinearRegression
         from sklearn.model_selection import train_test_split
         from sklearn.metrics import r2_score
-        data = pd.read_csv("https://raw.githubusercontent.com/GMDFr/Dataset/main/winequality-white.csv", sep = ';')    
+        data = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/winequality-white.csv", sep = ';')    
         """, language='python')
 
     # Afficher le DataFrame dans Streamlit
@@ -173,7 +173,7 @@ elif sous_menu == "Régression":
             from sklearn.metrics import mean_squared_error
 
             import pandas as pd
-            from sklearn.datasets import fetch_california_housing # "https://inria.github.io/scikit-learn-mooc/python_scripts/datasets_california_housing.html"
+            from sklearn.datasets import fetch_california_housing # "https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/datasets_california_housing.csv"
 
             # Charger l'ensemble de données California Housing
             data = fetch_california_housing()
@@ -188,7 +188,7 @@ elif sous_menu == "Régression":
     import numpy as np
     import pandas as pd
 
-    from sklearn.datasets import fetch_california_housing # "https://inria.github.io/scikit-learn-mooc/python_scripts/datasets_california_housing.html"
+    from sklearn.datasets import fetch_california_housing # "https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/datasets_california_housing.csv"
 
     # Charger l'ensemble de données California Housing
     data = fetch_california_housing()
@@ -316,7 +316,7 @@ elif sous_menu == "Régression":
 
     from sklearn.neighbors import KNeighborsRegressor
 
-    from sklearn.datasets import fetch_california_housing # "https://inria.github.io/scikit-learn-mooc/python_scripts/datasets_california_housing.html"
+    from sklearn.datasets import fetch_california_housing # "https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/datasets_california_housing.csv"
 
     # Load the dataset
     data = fetch_california_housing()
@@ -405,13 +405,13 @@ elif sous_menu == "Classification":
         st.code("""
         import pandas as pd
 
-        df_pokemon = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/pokemon.csv')
+        df_pokemon = pd.read_csv('https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/pokemon.csv')
         df_pokemon.head(3)
         """, language='python')
 
     import pandas as pd
 
-    df_pokemon = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/pokemon.csv')
+    df_pokemon = pd.read_csv('https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/pokemon.csv')
     df_pokemon.head(3)
     # Afficher le DataFrame dans Streamlit
     st.dataframe(df_pokemon, use_container_width=True)
@@ -500,7 +500,7 @@ elif sous_menu == "Classification":
 
             import pandas as pd
 
-            link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/titanic.csv"
+            link = "https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/titanic.csv"
             df_titanic = pd.read_csv(link)
 
             # quick preprocessing
@@ -517,7 +517,7 @@ elif sous_menu == "Classification":
 
     import pandas as pd
 
-    link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/titanic.csv"
+    link = "https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/titanic.csv"
     df_titanic = pd.read_csv(link)
 
     # quick preprocessing
@@ -642,7 +642,7 @@ elif sous_menu == "Clustering":
             from sklearn.datasets import fetch_california_housing
 
             # Charge un jeu de données à partir d'une URL GitHub contenant des informations sur les fleurs d'iris, et le stocke dans un DataFrame pandas.
-            df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
+            df = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/iris.csv")
 
             # Affiche les trois premières lignes du DataFrame pour avoir un aperçu des données.
             df.head(3)
@@ -655,7 +655,7 @@ elif sous_menu == "Clustering":
     from sklearn.datasets import fetch_california_housing
 
     # Charger le jeu de données Iris depuis un URL GitHub
-    df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/csv/iris.csv")
 
     # Afficher le DataFrame dans Streamlit
     st.dataframe(df, use_container_width=True)

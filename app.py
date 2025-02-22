@@ -28,7 +28,7 @@ with st.sidebar:
 st.sidebar.markdown(
     """
     <div style="text-align: center; margin-bottom: 1rem;">
-        <img src="https://media.licdn.com/dms/image/v2/D4E03AQGomjyiBWFb1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1701427770915?e=2147483647&v=beta&t=vMUouV4yfe2IRYuX3psMCp9iJv_HIgvNbiT1lH-h-OU" 
+        <img src="https://raw.githubusercontent.com/simunek-ludovic/streamlit-portfolio/refs/heads/main/images/ma_photo.jpg" 
                 alt="Photo de profil" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
     </div>
     <p style="margin: 0; font-weight: bold; font-size: 14px;">

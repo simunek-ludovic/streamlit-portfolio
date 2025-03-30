@@ -1,13 +1,72 @@
+import streamlit as st
+
+# Titre principal (optionnel car il pourrait déjà être dans la structure principale de votre app)
+# st.title("La Boussole Lilloise")
+
 # Contenu selon le choix du sous-menu
+st.header("Présentation")
 
-st.write("### Présentation")
+st.markdown("""
+**La Boussole Lilloise** est une solution intelligente de mobilité urbaine permettant aux usagers de consulter en temps réel et de manière prévisionnelle les conditions météorologiques ainsi que l'ensemble des services de transport disponibles dans la Métropole Lilloise.
+""")
 
-st.write("La Boussole Lilloise est une application permettant de consulter en temps réel et en prévisionnel les informations sur la météo ainsi que les différents modes de transport disponibles dans la Métropole Lilloise.")
+st.header("Fonctionnalités clés")
 
-st.write("### Ressources :")
-st.write("Plusieurs API ont été intégrées pour la réalisation de cette application.")
-st.write("Pour la météo, vous avez accès à des prévisions et à des relevés en temps réel, actualisés toutes les 15 minutes, pour les 24 heures à venir.")
-st.write("Quant aux modes de transport disponibles dans la Métropole Lilloise, vous pouvez consulter les informations concernant V'Lille, les bus, le métro, le tramway, les informations de trafic, les parkings relais et les aires de covoiturage.")
-st.write("Grâce à cette application, vous pouvez choisir le mode de transport le plus adapté en fonction de la météo.")
+st.markdown("""
+Notre application intègre plusieurs sources de données pour vous offrir une expérience complète :
+""")
 
-st.markdown("Pour découvrir l'application, visitez : [https://lsimunek.pythonanywhere.com/](https://lsimunek.pythonanywhere.com/).")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Données météorologiques")
+    st.markdown("""
+    Accédez à des prévisions précises et des relevés en temps réel, actualisés toutes les 15 minutes, couvrant les 24 heures à venir.
+    """)
+
+with col2:
+    st.subheader("Écosystème de mobilité")
+    st.markdown("""
+    Consultez l'état des services de transport de la Métropole Lilloise :
+    """)
+    
+    # Utilisation de markdown pour créer une liste à puces
+    st.markdown("""
+    * Vélos en libre-service (V'Lille)
+    * Réseau de bus
+    * Lignes de métro
+    * Réseau de tramway
+    * Informations trafic routier en temps réel
+    * Disponibilité des parkings-relais
+    * État des aires de covoiturage
+    """)
+
+# Ajout d'un séparateur pour une meilleure organisation visuelle
+st.divider()
+
+# Section valeur ajoutée
+st.header("Notre valeur ajoutée")
+
+st.markdown("""
+La Boussole Lilloise vous permet d'optimiser vos déplacements en vous proposant le mode de transport le plus adapté en fonction des conditions météorologiques et de l'état du réseau, vous faisant ainsi gagner un temps précieux au quotidien.
+""")
+
+# Informations techniques sur les sources de données (adapté de votre texte original)
+st.header("Sources de données")
+st.markdown("""
+Plusieurs API ont été intégrées pour la réalisation de cette application :
+* API météo pour les prévisions et données en temps réel
+* API transport pour les informations sur les différents modes de transport
+* Techniques de webscraping pour récupérer les informations de trafic en temps réel
+""")
+
+# Section découverte avec encadrement spécial
+st.header("Découvrez notre plateforme")
+
+# Création d'un encadré spécial pour le lien
+st.info("""
+Pour bénéficier de tous les avantages de La Boussole Lilloise, visitez notre application en ligne : [https://lsimunek.pythonanywhere.com/](https://lsimunek.pythonanywhere.com/)
+""")
+
+# Ajout d'une note de bas de page ou d'information supplémentaire
+st.caption("© 2025 La Boussole Lilloise - Tous droits réservés")

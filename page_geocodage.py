@@ -126,3 +126,15 @@ with st.expander("Pour créer la carte, nous allons utiliser la librairie Folium
             folium.Marker(location=row['coordonnees'], popup=row['nom']).add_to(carte)
 
     st_folium(carte, width=1000, height=600)
+
+
+
+import folium
+from streamlit_folium import st_folium
+
+carte = folium.Map(location=resto_paris['coordonnees'].iloc[0], zoom_start=13)
+for index, row in resto_paris.iterrows():
+    if row['coordonnees'] is not None:
+        folium.Marker(location=row['coordonnees'], popup=row['nom']).add_to(carte)
+
+st_folium(carte, width=1000, height=600)
